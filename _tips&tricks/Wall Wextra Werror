@@ -1,0 +1,51 @@
+Ah! Perfect, now we’re talking about **GCC compiler flags**. Let’s break down each one carefully:
+
+You wrote:
+
+```bash
+gcc -Wall -Wextra -Werror main.c
+```
+
+Here’s what each flag does:
+
+---
+
+### 1. `-Wall`
+
+* Stands for **“Warn all”** (or more accurately, “warn about most common issues”).
+* Enables a set of **common warning messages** that the compiler thinks are useful for catching potential bugs.
+* Examples of warnings it enables: unused variables, functions declared but not used, or suspicious assignments.
+
+💡 Important: `-Wall` **doesn’t literally turn on all warnings**, but it’s the baseline for good warning coverage.
+
+---
+
+### 2. `-Wextra`
+
+* Stands for **“Warn extra”**.
+* Enables **additional warnings** not included in `-Wall`.
+* Examples: comparisons between signed and unsigned types, missing function prototypes in some cases, or extra semicolons.
+
+💡 Use `-Wextra` when you want **stricter checking** and catch more subtle mistakes.
+
+---
+
+### 3. `-Werror`
+
+* Stands for **“Warnings as errors”**.
+* Treats **all compiler warnings as errors**, so your code **will not compile if any warning exists**.
+* Purpose: forces you to write **clean, warning-free code** — very common in professional or school projects.
+
+---
+
+### Summary
+
+* `-Wall` → catch most common warnings.
+* `-Wextra` → catch even more warnings.
+* `-Werror` → warnings are treated as errors; compilation fails if any exist.
+
+✅ Together, these flags ensure your code is **robust, clean, and warning-free**, which is why your `ft_print_alphabet.c` example compiles cleanly with them.
+
+---
+
+If you want, I can also explain **a few common warnings you might see with these flags** and how to fix them — it’s really useful for 42 school exercises. Do you want me to do that?
